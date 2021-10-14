@@ -28,6 +28,16 @@
           </p>
         </td>
 
+        
+        <td>
+        <% if product.active? %>
+        <div class="circle"></div>
+        <% end %>
+        </td>
+        
+
+
+
         <td class="actions">
           <ul>
             <li><%= link_to 'Show', product %></li>
