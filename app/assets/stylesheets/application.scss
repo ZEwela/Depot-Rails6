@@ -51,6 +51,9 @@ header.main {
             text-align: left; // desktop nav is left-aligned 
             padding: 1em;     // and needs more padding 
         }
+        p.clock {
+            color: white;
+        }
         ul {
             list-style: none;
             margin: 0;
