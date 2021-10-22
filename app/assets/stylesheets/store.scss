@@ -4,6 +4,16 @@
 
 .store {
     max-width: 80em;
+    h2 {
+        font-size: 1em;
+    }
+    .counter {
+        font-size: 1em;
+        color: black;
+    }
+    h2, .counter {
+        display: inline;
+    }
     ul.catalog {
         border-top: solid 0.250em;
         list-style: none;

@@ -2,6 +2,12 @@
     <aside id="notice"><%= notice %></aside>
 <% end %>
 
+<div class="counter"> 
+    <h2>This page was view:</h2>
+    <%= pluralize(@counter, 'time') %>
+    
+</div>
+
 <h1>Your Pragmatic Catalog</h1>
 
 <ul class="catalog">
