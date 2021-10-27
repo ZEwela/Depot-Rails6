@@ -24,24 +24,28 @@ class CartsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show cart" do
-    get cart_url(@cart)
+    get store_index_url
+    get cart_url(session[:cart_id])
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_cart_url(@cart)
+    get store_index_url # This will create session
+    get edit_cart_url(session[:cart_id])
     assert_response :success
   end
 
   test "should update cart" do
-    patch cart_url(@cart), params: { cart: {  } }
-    assert_redirected_to cart_url(@cart)
+    get store_index_url
+    patch cart_url(session[:cart_id]), params: { cart: {  } }
+    assert_redirected_to cart_url(session[:cart_id])
   end
 
   test "should destroy cart" do
+
     post line_items_url, params: { product_id: products(:ruby).id }
-    @cart = Cart.find(session[:cart_id]
-    )
+    @cart = Cart.find(session[:cart_id])
+
     assert_difference('Cart.count', -1) do
       delete cart_url(@cart)
     end
