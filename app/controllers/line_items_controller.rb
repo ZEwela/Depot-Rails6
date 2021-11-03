@@ -56,6 +56,7 @@ class LineItemsController < ApplicationController
     @cart.delete_product(@line_item)
     respond_to do |format|
       format.html { redirect_to store_index_url, notice: "Product removed." }
+      format.js
       format.json { head :no_content }
     end
   end
