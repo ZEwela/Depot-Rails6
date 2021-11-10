@@ -43,4 +43,10 @@
     input[type="submit"]:hover {
         background-color: #992;
     }
+
+    .actions {
+        form {
+            display:inline-block;
+        }
+    }
 }
