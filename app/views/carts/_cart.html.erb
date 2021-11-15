@@ -13,7 +13,7 @@
   
   <div class="actions">
     <%= button_to 'Empty cart', cart, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %>
-    <%= button_to 'Checkout', new_order_path, method: :get, class: "Checkout" %>
+    <%= button_to 'Checkout', new_order_path, method: :get, class: "Checkout", disabled: current_page?(new_order_path) ? true : false %>
   </div>
 </article>
 <% end %>
